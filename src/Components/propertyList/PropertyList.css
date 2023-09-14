@@ -5,7 +5,6 @@
     justify-content: space-between;
     gap: 20px;
     bottom: 10px;
-    margin-top: 20px;
 }
 .pListItem{
     flex: 1;
