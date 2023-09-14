@@ -5,6 +5,7 @@ const List = () => {
   return <div>
     <Navbar/>
     <Header type="list"/>
+    
   </div>;
 };
 
