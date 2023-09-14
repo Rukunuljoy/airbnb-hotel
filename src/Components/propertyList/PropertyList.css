@@ -5,8 +5,10 @@
     justify-content: space-between;
     gap: 20px;
     bottom: 10px;
+    margin-top: 20px;
 }
 .pListItem{
+    flex: 1;
     border-radius: 10px;
     overflow: hidden;
     cursor: pointer;
@@ -16,7 +18,10 @@
     height: 150px;
     object-fit: cover;
 }
-
-.pListTitles{
-    font-size: 12px;
+.pListTitles>h1{
+    font-size: 18px;
+}
+.pListTitles>h2{
+    font-size: 14px;
+    font-weight: 300;
 }

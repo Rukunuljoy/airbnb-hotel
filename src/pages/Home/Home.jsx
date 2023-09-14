@@ -13,6 +13,7 @@ const Home = () => {
         browse by property type
         <PropertyList/>
       </h1>
+      <h1 className='homeTitle'>Home guest love</h1>
     </div>
   </div>;
 };
