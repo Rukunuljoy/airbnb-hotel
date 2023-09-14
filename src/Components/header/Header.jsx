@@ -1,3 +1,4 @@
+
 import "./Header.css";
 import {
   FaBed,
@@ -9,11 +10,15 @@ import {
 } from "react-icons/fa";
 import { DateRange } from "react-date-range";
 import { useState } from "react";
-import "react-date-range/dist/styles.css"; // main css file
-import "react-date-range/dist/theme/default.css"; // theme css file
+import "react-date-range/dist/styles.css"; 
+import "react-date-range/dist/theme/default.css";
 import { format } from "date-fns";
+import PropTypes from "prop-types";
 
-const Header = () => {
+const Header = ({type}) => {
+    Header.propTypes = {
+        type: PropTypes.string.isRequired,
+      };
   const [openDate, setOpenDate] = useState(false);
   const [date, setDate] = useState([
     {
@@ -39,7 +44,7 @@ const Header = () => {
   }
   return (
     <div className="header">
-      <div className="headerContainer">
+      <div className={type === "list" ? "headerContainer listMode" : "headerContainer"}>
         <div className="headerList">
           <div className="headerListItem active">
             <FaBed size={25} />
@@ -62,7 +67,8 @@ const Header = () => {
             <span>Airport taxis</span>
           </div>
         </div>
-        <h1 className="headerTitle">A lifetime of discount?its genius</h1>
+      { type !== "list" && 
+      <> <h1 className="headerTitle">A lifetime of discount?its genius</h1>
         <p className="headerDesc">
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus
           molestias modi nesciunt eaque, repellendus illo. <br />
@@ -134,7 +140,7 @@ const Header = () => {
           <div className="headerSearchItem">
             <button className="headerButton">Search</button>
           </div>
-        </div>
+        </div></>}
       </div>
     </div>
   );
