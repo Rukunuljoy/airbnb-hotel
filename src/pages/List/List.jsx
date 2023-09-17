@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import  { useState } from "react";
 import { useLocation } from "react-router-dom";
 import Header from "../../Components/header/Header";
@@ -12,6 +13,7 @@ const List = () => {
   const [destination, setDestination] = useState(
     location.state?.destination || ""
   );
+  
   const [date, setDate] = useState(location.state?.date || [{}]); // Initialize as an empty array
   const [openDate, setOpenDate] = useState(false);
   const [options, setOptions] = useState(location.state?.options || {

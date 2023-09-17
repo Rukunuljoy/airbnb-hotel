@@ -41,6 +41,7 @@
     border-radius: 10px;
     position: static;
     top: 10px;
+    height: max-content;
 }
 .listSearch>button{
     padding: 10px;

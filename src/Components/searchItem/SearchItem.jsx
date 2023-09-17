@@ -12,7 +12,17 @@ const SearchItem = () => {
                 <span className='siCancelOp'>Lorem, ipsum.</span>
                 <span className='siCancelOpSubtitle'>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Possimus, magni.</span>
             </div>
-            <div className='isDetails'>Details</div>
+            <div className='isDetails'>
+                <div className="siRating">
+                    <span>excellent</span>
+                    <button>8.9</button>
+                </div>
+                <div className="siDetailTexts">
+                    <span className="siPrice">$123</span>
+                    <span className="siTextOp">include taxes and fees</span>
+                    <button className='siCheckButton'>see Available</button>
+                </div>
+            </div>
         </div>
     );
 };
